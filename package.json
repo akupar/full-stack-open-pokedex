@@ -9,7 +9,8 @@
     "test": "jest",
     "test:e2e": "cypress open",
     "eslint": "eslint './**/*.{js,jsx}'",
-    "build": "webpack --mode production"
+      "build": "webpack --mode production",
+      "healthcheck": "./health_check.sh"
   },
   "repository": {
     "type": "git",

@@ -24,6 +24,9 @@ jobs:
         run: npm run build
       - name: run tests
         run: npm run test
+      - name: run health check
+        run: npm run healthcheck
+        wait-on: https://pokedex-test.onrender.com/
 #      - name: e2e tests
 #        uses: cypress-io/github-action@v2
 #        with:
