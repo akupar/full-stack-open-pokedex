@@ -59,7 +59,7 @@ const PokemonPage = ({ previous, next }) => {
         </div>
         <footer>
             Footer
-
+kdkfkdfkdfkdjkfdkfdjkfdkfjdkfjdkfjdkfjkdfjkdjfdf
             x
         </footer>
       </div>
