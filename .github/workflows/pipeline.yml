@@ -69,6 +69,8 @@ jobs:
 
 
   health_check:
+    needs: [simple_deployment_pipeline]
+    runs-on: ubuntu-20.04
     steps:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v3
