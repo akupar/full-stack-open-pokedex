@@ -1,0 +1,14 @@
+on:
+  schedule:
+    - cron: '50 * * * *'
+
+jobs:
+  health_check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: https://pokedex-test.onrender.com/api/ping
+          max-attempts: 3
+          retry-delay: 5s
