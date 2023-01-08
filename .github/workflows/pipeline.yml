@@ -66,3 +66,13 @@ jobs:
           DEFAULT_BUMP: patch
           WITH_V: true
         if: ${{ !contains(join(github.event.commits.*.message, '; '), '#skip') }}
+
+
+  health_check:
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: https://pokedex-test.onrender.com/api/ping
+          max-attempts: 3
+          retry-delay: 5s
